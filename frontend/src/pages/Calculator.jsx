@@ -47,14 +47,14 @@ function Calculator() {
 
   const calculate = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/calculate/", { num1, num2, num3 });
+      const response = await axios.post("https://designers-calculator.onrender.com/api/calculate/", { num1, num2, num3 });
       setResult(response.data.result);
     } catch { alert("Error"); }
   };
 
   const data = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/data/1/");
+      const response = await axios.get("https://designers-calculator.onrender.com/api/data/1/");
       setKol(response.data.kol);
       setviral(response.data.viral);
       sethamsham(response.data.hamsham);
@@ -63,7 +63,7 @@ function Calculator() {
 
   const update = async () => {
     try {
-      await axios.put("http://127.0.0.1:8000/api/data/1/", {
+      await axios.put("https://designers-calculator.onrender.com/api/data/1/", {
         kol: Number(kol), viral: Number(viral), hamsham: Number(hamsham),
       });
       alert("Updated Successfully");
