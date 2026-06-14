@@ -1,7 +1,7 @@
 import "./App.css";
-import Calculator from "./pages/calculator";
+import Calculator from "./pages/Calculator";      // ✅ capital C
+import WelcomePage from "./pages/Welcomepage";    // ✅ capital W
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import WelcomePage from "./pages/welcomepage";
 
 function App() {
   return (
@@ -15,4 +15,5 @@ function App() {
     </Router>
   );
 }
+
 export default App;
